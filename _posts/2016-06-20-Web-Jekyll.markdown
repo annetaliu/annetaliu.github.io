@@ -3,6 +3,7 @@ layout: post
 title:  "Start Jekyll Blog on GitHub"
 date:   2016-06-20 04:11:26 -0900
 categories: blog in jekyll
+permalink: /web/jekll
 ---
 ## 如何快速地创建自己的博客？ 
 Jekyll on github 是一个灰常棒的选择:
