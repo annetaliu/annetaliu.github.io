@@ -18,6 +18,13 @@ Jekyll on github 是一个灰常棒的选择:
 
 ## 基本步骤：
 * 安装好基本软件，库，启动demo的网站
+
+``` bash
+jekyll server -H 10.0.2.15
+```
+
+![log](/images/jekyll-blog-1-server-start-log.png)
+
 * 本地调试之后上传到github, github的项目名称有格式规定，比如我的是：annetaliu.github.io
 * 尝试添加demo之外的第一篇文章
 	* 在_post 目录之下添加类似格式的文章。默认markdown 格式（配置文件可以修改）。
