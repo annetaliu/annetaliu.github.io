@@ -1,21 +1,22 @@
 ---
 layout: post
-title:  Python Advanced1：less than class
+title:  Python Advanced1:less than class
 date:   2016-06-27 01:11:26 -0900
 categories: python
 permalink: /python/advanced1
 ---
+This page is About:
 
-* ###list comprehensions
-* ###Iterator & Generators
-* ###Discriptors & Properties
-* ###Decrators
-* ###Contextlib
+* __list comprehensions__
+* __Iterator & Generators__
+* __Discriptors & Properties__
+* __Decrators__
+* __Contextlib__
 
+---
 
-
-* list comprehensions
-    * vectorization [矢量化编程的概念](http://ufldl.stanford.edu/wiki/index.php/%E7%9F%A2%E9%87%8F%E5%8C%96%E7%BC%96%E7%A8%8B)
+* **list comprehensions**   
+	* vectorization [矢量化编程的概念](http://ufldl.stanford.edu/wiki/index.php/%E7%9F%A2%E9%87%8F%E5%8C%96%E7%BC%96%E7%A8%8B)
     * enumerate() 遍历list同时得到index,value. 可用于提高效率，尤其在矢量化编程中。
     * [VS map() and / or filter()](http://www.secnetix.de/olli/Python/list_comprehensions.hawk):
         map() and / or filter(), list comprehensions 可以解决类似的一些问题,但是通常列表推导的效率、可读性更高。 
@@ -32,7 +33,7 @@ permalink: /python/advanced1
 [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]    
 ```
 
-* iterators & generators 迭代器和生成器
+* **iterators & generators 迭代器和生成器**
     * 迭代器本身是一个底层的的特性和概念，为生成器提供了基础
     * 生成器： 当需要一个返回一个的函数，或返回在循环中执行的函数时，就应该考虑生成器。
 		* 基于yield：暂停一个函数，并返回中间结果
@@ -133,5 +134,9 @@ StopIteration
 		* tee: 往返式的迭代器
 		* groupby：uniq迭代器， 当需要在数据上完成一个摘要时，结合sorted函数，可以把相似的元素放到一起。
 			* ex:使用行程长度编码(RLE)来压缩数据：字符中每组相邻的重复字符将替换成字符本身和重复次数。 [LZ77压缩](https://zh.wikipedia.org/wiki/LZ77%E4%B8%8ELZ78)
-
-* else:
+	* itertools的工具都可以自行实现。itertools只是提供了更加成形的解决方案。 [一些函数](http://www.cnblogs.com/vamei/p/3174796.html)
+		* 无穷循环器： count, cycle, repeat
+		* 函数式工具： imap, starmap, ifilter, ifilterfalse, takewhile, dropwhile
+		* 组合工具： chain, product, permutations, combinations, combinations_with_replacement
+		
+* **Decrators**
