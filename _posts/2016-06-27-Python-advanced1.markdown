@@ -7,7 +7,7 @@ permalink: /python/advanced1
 ---
 This page is About:
 
-* __list comprehensions__
+* __List comprehensions__
 * __Iterator & Generators__
 * __Discriptors & Properties__
 * __Decrators__
@@ -127,7 +127,7 @@ StopIteration
 64
 ```
 
-* itertools模块
+* itertools模块	
 	* 提供了许多高效迭代器模式,可以用各种方式对数据进行循环操作，此模块中的所有函数返回的迭代器都可以与for循环语句以及其他包含迭代器（如生成器和生成器表达式）的函数联合使用。
 	* islice, tee, groupby
 		* islice: 抽取位于流中特定位置的数据，可以看作在每行数据之上的一个滑动窗口。
@@ -140,3 +140,11 @@ StopIteration
 		* 组合工具： chain, product, permutations, combinations, combinations_with_replacement
 		
 * **Decrators**
+	* 封装函数和方法，增强一个函数（通常是改变作用域，类型？）。 ？方法和函数的差别？ 
+		*　ex: @classmethod  ,@staticmethod  替代了用对应的方法增强函数的操作。 
+		* 关注所封装的函数或方法的接受和返回的参数，减少[introspection](https://www.hikyle.me/archives/581/)
+		
+		
+		
+		
+		
