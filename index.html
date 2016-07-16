@@ -9,7 +9,9 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p class="meta"><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        浏览量：<span data-hk-page="current"> - </span>次<span class="pause"> | </span>
+		</p>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
