@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Crash Course 文学系列观后感
-date:   2016-07-16 16:11:26 -0900
+date:   2016-07-16
 categories: 读后感
 permalink: /读后感/crashcourse1
 ---
