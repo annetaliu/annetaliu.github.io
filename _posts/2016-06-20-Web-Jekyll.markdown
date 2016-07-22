@@ -35,7 +35,8 @@ jekyll server -H 10.0.2.15
 ## 附加功能补充：
 * 增加流量监控：
 	* 有很多方法，我随便网上找了一个： [hit-counter](http://jerryzou.com/posts/introduction-to-hit-kounter-lc/)
-		* 注册帐号，登记网站[多说](http://duoshuo.com/) 
+		* 到第三方评论网站[多说](http://duoshuo.com/) 注册帐号，登记网站。
 		* 增加两个js文件，在页面添加标签
 * 增加评论功能：	
+	* 用多说的接口支持多平台迁移，接入。 [参考](http://www.tuicool.com/articles/z2Iz6fF)
 	
