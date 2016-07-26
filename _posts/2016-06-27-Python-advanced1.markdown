@@ -143,8 +143,61 @@ StopIteration
 	* 封装函数和方法，增强一个函数（通常是改变作用域，类型？）。 ？方法和函数的差别？ 
 		*　ex: @classmethod  ,@staticmethod  替代了用对应的方法增强函数的操作。 
 		* 关注所封装的函数或方法的接受和返回的参数，减少[introspection](https://www.hikyle.me/archives/581/)
+		* 常用于： 参数检查;缓存代理;上下文提供者
+			* ex: 提供xmlrpc的签名认证
+			* ex: 多线程共享的数据，多重访问的保护锁。 
+
+* **with and contextlib**
+	* __enter__() 和 __exit__()之间的步骤
+	* 和try... finally ...相比，with简化了实现过程：对于即使发生一些错误也能进行代码清理
+		* 关闭一个文件
+		* socket
+		* 释放一个锁
+		* 创建一个临时代码补丁
+		* 在特殊环境中运行受保护的代码	
+	* contextlib是为了加强with语句，提供上下文机制的模块，它是通过Generator实现的。
+		* ？下面的例子我的理解是： @contextmanager 增加了__enter__() 和 __exit__() 这个上下文。
 		
+``` bash
+[anne@BTSOM-1 test]$ cat test.py
+from contextlib import contextmanager
+
+@contextmanager
+def make_context() :
+    print 'enter'
+    try :
+        yield {}
+    except RuntimeError, err :
+        print 'error' , err
+    finally :
+        print 'exit'
+
+with make_context() as value :
+    print value
+
+print "============="
+def new_context():
+    print 'enter'
+    try:
+        yield {}
+    except RuntimeError, err:
+        print 'error',err
+    finally:
+        print 'exit'
+
+with new_context() as value:
+    print value
+
+```		
+```	bash	
+[anne@BTSOM-1 test]$ python test.py
+enter
+{}
+exit
+=============
+Traceback (most recent call last):
+  File "test.py", line 26, in <module>
+    with new_context() as value:
+AttributeError: __exit__
 		
-		
-		
-		
+```		
