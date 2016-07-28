@@ -156,6 +156,7 @@ StopIteration
 		* 创建一个临时代码补丁
 		* 在特殊环境中运行受保护的代码	
 	* contextlib是为了加强with语句，提供上下文机制的模块，它是通过Generator实现的。
+		* nested, closing
 		* ？下面的例子我的理解是： @contextmanager 增加了__enter__() 和 __exit__() 这个上下文。
 		
 ``` bash
