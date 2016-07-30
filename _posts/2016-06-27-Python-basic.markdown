@@ -9,5 +9,8 @@ permalink: /python/basic
 * class object类对象：属性引用&实例化
 	* 实例变量和类变量的差别
 
+* tuple and list , set(), sort()
 
+
+* 
 	

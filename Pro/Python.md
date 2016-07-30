@@ -12,6 +12,7 @@ title: Python
 **Practise [dojo](http://cyber-dojo.org/) Record:**
 
 * [Doors](/python/dojo/doors)
+* [Anagrams](/python/dojo/anagrams)
 * Game of life
 
 **Extention:**
