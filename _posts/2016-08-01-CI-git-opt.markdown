@@ -1,0 +1,12 @@
+---
+layout: post
+title:  git - basic options
+date:   2016-08-01 01:11:26 -0800
+categories: CI
+permalink: /CI/git/basicopts
+---
+
+the difference between git clone
+
+
+

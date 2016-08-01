@@ -24,6 +24,8 @@ def anagram_letters(letters):
     return set([ "".join(a) for a in itertools.permutations([e for e in letters],len(letters))])
 	#think about how to write itertools.permutations in V2.0
 ```
+[如何实现itertools.permutations](http://wklken.me/posts/2013/08/20/python-extra-itertools.html#itertoolspermutationsiterable-r)
+
 
 **V1.0** Test:
 
@@ -46,7 +48,7 @@ class TestAnagram(TestCase):
     def test_3_same_word(self):
         self.assertEqual(anagram_letters("bbb"),{"bbb"})
 
-    def test_len_4_different_word(self):
+    def test_len_4_word(self):
         self.assertEqual(len(anagram_letters("aabb")),6)
 
     def test_len_4_different_word(self):
