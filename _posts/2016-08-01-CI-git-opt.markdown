@@ -6,7 +6,7 @@ categories: CI
 permalink: /CI/git/basicopts
 ---
 
-the difference between git clone
+the difference between git clone & git pull  & git fetch
 
 
 

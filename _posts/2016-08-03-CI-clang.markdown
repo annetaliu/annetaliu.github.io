@@ -1,0 +1,39 @@
+---
+layout: post
+title:  Code Check-Clang
+date:   2016-08-03 01:11:26 -0800
+categories: CI
+permalink: /CI/codecheck/clang
+---
+Please always refer to offical [UsersManual](http://clang.llvm.org/docs/UsersManual.html)
+
+**What Clang can do:**
+
+* Clang Compiler: 一种开源的C家族编译器,可以取代gcc；
+	* 采用了[LLVM](http://llvm.org/) optimizer: 支持很多target的高度优化和代码生成
+	* 支持文档生成
+* ["Clang" CFE Internals Manual](http://clang.llvm.org/docs/InternalsManual.html): 高端用户，调用API,调用定制修改一些库
+* [Clang Static Analyzer](http://clang-analyzer.llvm.org/): 针对C， C++， Objective-C programs
+	* 分析语法，甚至语意，找出bug.
+
+
+**how to use Clang Static Analyzer:**
+* apt-install clang
+	* available cmd: 
+		* clang 
+		* clang-apply-replacements 
+		* clang-query
+		* clang-tblgen
+		* clang-check 
+		* clang-tidy
+		* scan-build
+		* scan-view
+* 外嵌的命令： 
+	* [scan-build](http://clang-analyzer.llvm.org/scan-build.html) :scan-build make
+	* scan-view :
+* clang-tidy
+
+
+**Report analysis:**
+
+* 默认展现形式： html
