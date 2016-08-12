@@ -7,21 +7,21 @@ title: CI
 on building....<br>
 **Continuous Intergration:**<br>
 
-* Tools: Gerrit
+* Tools: [git & Gerrit](/CI/git/basicopts)
 * Tools: gitlab
 * Tools: svn
 * Tools: Jenkins
 * Make: Makefile & Cmake
-* Make: automake
+* Make: [automake](/CI/automake)
 * Make: Maven for Java
-* Code Analysis Tool: Clang
+* Code Analysis Tool: [Clang](/CI/codecheck/clang)
 * Code Analysis Tool: Valgrind
 * Code Analysis Tool: G-cover & sonar
-* Optimize Tech: Distcc
+* Optimize Tech: [Distcc](/CI/distcc)
 * Optimize Tech: LXC
 * Optimize Tech: Docker
 * Optimize Tech: Zuul system
-* Optimize Tech: Ansible
+* Optimize Tech: [Ansible](/CI/ansible)
 * 
 
 **Testing:** <br>

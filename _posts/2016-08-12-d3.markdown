@@ -1,0 +1,26 @@
+---
+layout: post
+title: D3:Data-Driven Documents
+date:   2016-08-12 01:11:26 -0000
+categories: data
+permalink: /data/d3
+---
+
+[D3](https://d3js.org/)是基于javascript的网页动态图展示框架：
+
+* 设计思想：
+
+	* 数据和图在页面上的出现，更新和消失： enter/update/exit
+	* 大量的函数式编程思想
+	* 动画： 颜色的渐变，过度效果的定制。
+	* .data .enter 
+
+	
+* example explain: [game of life](https://github.com/feiyuw/gameoflife), [detail note](http://blog.zhangyu.so/ta/2016/07/04/a-glance-of-web-ta/)
+	
+	* board画布	
+	* SVG矢量图的渲染： 内置图形，一堆坐标表示的图形（xml）
+	* 界面上的每个点，对应js中的一个object， 有三个值： 两个表示坐标，一个半径，以此画出一个圆圈的渲染。
+	* 颜色的渲染
+	*　
+

@@ -141,7 +141,7 @@ StopIteration
 		
 * **Decrators**
 	* 封装函数和方法，增强一个函数（通常是改变作用域，类型？）。 ？方法和函数的差别？ 
-		*　ex: @classmethod  ,@staticmethod  替代了用对应的方法增强函数的操作。 
+		* ex: @classmethod  ,@staticmethod  替代了用对应的方法增强函数的操作。 
 		* 关注所封装的函数或方法的接受和返回的参数，减少[introspection](https://www.hikyle.me/archives/581/)
 		* 常用于： 参数检查;缓存代理;上下文提供者
 			* ex: 提供xmlrpc的签名认证

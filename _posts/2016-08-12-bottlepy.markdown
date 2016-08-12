@@ -1,0 +1,18 @@
+---
+layout: post
+title: Bottlepy
+date:   2016-08-12 01:11:26 -0000
+categories: python
+permalink: /python/bottlepy
+---
+
+一个轻量级的web框架： [bottlepy](http://www.bottlepy.org/docs/dev/index.html)， 只有一个文件。
+
+* 只有一个py文件
+* url mapping
+* wsgi: 接入 gevent/gunicorn/uwsgi
+* template： jinjia2...
+* 数据库：找中间件： beaker ...
+	* moudule层
+
+

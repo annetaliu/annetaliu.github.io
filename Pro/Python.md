@@ -23,8 +23,9 @@ title: Python
 
 * pandas
 * numpy
-* D3
+* [D3](/data/d3)
 
 **web:**
 
 * Django
+* [bottlepy](/python/bottlepy)
