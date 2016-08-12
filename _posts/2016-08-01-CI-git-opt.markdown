@@ -1,12 +1,57 @@
 ---
 layout: post
-title:  git - basic options
+title:  git & gerrit - basic options
 date:   2016-08-01 01:11:26 -0800
 categories: CI
 permalink: /CI/git/basicopts
 ---
 
-the difference between git clone & git pull  & git fetch
+**
+
+**hooks**:
+
+Git hooks [introduction](https://www.atlassian.com/git/tutorials/git-hooks/) , [practise manual](http://githooks.com/)
+* Local-side Hooks: user can custom some repeated work  automatically with local hooks
+* Server-side Hooks : CI usually focus on server side hooks to control some commit content or msg
+
+[gerrit hooks](https://review.cyanogenmod.org/Documentation/config-hooks.html) VS git hooks:
+* gerrit supported usually:
+	**ref-update**
+	patchset-created
+	draft-published
+	comment-added
+	change-merged
+	merge-failed
+	change-abandoned
+	change-restored
+	**ref-updated**
+	reviewer-added
+	topic-changed
+	hashtags-changed
+	cla-signed
+
+* git supported:
+	applypatch-msg
+	pre-applypatch
+	post-applypatch
+	pre-commit
+	prepare-commit-msg
+	commit-msg
+	post-commit
+	pre-rebase
+	post-checkout
+	post-merge
+	pre-receive
+	update
+	post-receive
+	post-update
+	pre-auto-gc
+	post-rewrite
+	pre-push
 
 
 
+
+**Questions:**
+
+* the difference between git clone & git pull  & git fetch

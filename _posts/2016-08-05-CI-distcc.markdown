@@ -1,0 +1,14 @@
+---
+layout: post
+title:  Distcc
+date:   2016-08-05 01:11:26 -0800
+categories: CI
+permalink: /CI/distcc
+---
+
+distcc是一个分布式编译工具：
+	* distccd
+	* distcc
+
+	
+	

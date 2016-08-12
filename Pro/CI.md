@@ -12,6 +12,7 @@ on building....<br>
 * Tools: svn
 * Tools: Jenkins
 * Make: Makefile & Cmake
+* Make: automake
 * Make: Maven for Java
 * Code Analysis Tool: Clang
 * Code Analysis Tool: Valgrind
