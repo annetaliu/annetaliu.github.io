@@ -13,8 +13,11 @@ permalink: /CI/automake
 * 由automake根据另一个宏文件生成Makefile.in,
 * 再使用configure依据Makefile.in来生成一个符合惯例的 Makefile.
 
+**autoconf **
 
-    
+
+  
+  
 **相关命令介绍**
 
 * autoscan

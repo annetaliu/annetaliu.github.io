@@ -11,11 +11,14 @@ on building....<br>
 * Tools: gitlab
 * Tools: svn
 * Tools: Jenkins
-* Make: Makefile & Cmake
+* Make: Makefile
+* Make: Cmake
+* Make: imake
+* Make: qmake
 * Make: [automake](/CI/automake)
 * Make: Maven for Java
 * Code Analysis Tool: [Clang](/CI/codecheck/clang)
-* Code Analysis Tool: Valgrind
+* Code Analysis Tool: [Valgrind](/CI/valgrind)
 * Code Analysis Tool: G-cover & sonar
 * Optimize Tech: [Distcc](/CI/distcc)
 * Optimize Tech: LXC
