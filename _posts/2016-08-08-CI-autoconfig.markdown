@@ -13,8 +13,9 @@ permalink: /CI/automake
 * 由automake根据另一个宏文件生成Makefile.in,
 * 再使用configure依据Makefile.in来生成一个符合惯例的 Makefile.
 
-**autoconf **
+**autoconf**
 
+* 各种参数设置，判断，生成的Makefile的大部分参数都通过这个文件设置
 
   
   

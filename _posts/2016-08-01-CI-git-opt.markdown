@@ -6,16 +6,17 @@ categories: CI
 permalink: /CI/git/basicopts
 ---
 
-**
-
 **hooks**:
 
 Git hooks [introduction](https://www.atlassian.com/git/tutorials/git-hooks/) , [practise manual](http://githooks.com/)
+
 * Local-side Hooks: user can custom some repeated work  automatically with local hooks
 * Server-side Hooks : CI usually focus on server side hooks to control some commit content or msg
 
 [gerrit hooks](https://review.cyanogenmod.org/Documentation/config-hooks.html) VS git hooks:
+
 * gerrit supported usually:
+
 	**ref-update**
 	patchset-created
 	draft-published
@@ -31,6 +32,7 @@ Git hooks [introduction](https://www.atlassian.com/git/tutorials/git-hooks/) , [
 	cla-signed
 
 * git supported:
+
 	applypatch-msg
 	pre-applypatch
 	post-applypatch
