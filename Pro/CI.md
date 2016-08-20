@@ -19,7 +19,7 @@ on building....<br>
 * Make: Maven for Java
 * Code Analysis Tool: [Clang](/CI/codecheck/clang)
 * Code Analysis Tool: [Valgrind](/CI/valgrind)
-* Code Analysis Tool: G-cover & sonar
+* Code Analysis Tool: [G-cover & sonar](/CI/gcov)
 * Optimize Tech: [Distcc](/CI/distcc)
 * Optimize Tech: LXC
 * Optimize Tech: Docker
