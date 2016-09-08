@@ -1,0 +1,99 @@
+---
+layout: post
+title:  Gerrit 
+date:   2016-08-25
+categories: CI
+permalink: /CI/git/gerrit
+---
+
+General INFO:
+
+* Project home page: https://www.gerritcodereview.com/
+* Project source browser: https://gerrit.googlesource.com/
+
+
+
+gerrit 服务器安装启动配置：
+
+* 创建gerrit用户 - 特定用户管理有什么特别原因么?
+* 下载War包 [官网](https://gerrit-releases.storage.googleapis.com/index.html)
+	* war 包 jar 包 ， tar包的区别：
+		* jar 多个文件打包压缩。
+		* tar 只是打包，没有压缩，通常结合其他工具进行压缩： *.tar.bz2, *.tar.gz
+		* war是专用于web app的jar。另外还有用于enterprise app的ear后缀。
+* java -jar gerrit-$version-rc1.war init -d review_site
+	* [init配置步骤](http://my.oschina.net/zhongl/blog/33017)
+		* gerrit index是什么？-LUCENE
+		* authontication method: 
+			* java -jar gerrit-2.10.war reindex
+			* HTTP VS OPENID
+		* SSO logout url
+		* review labels
+		* listen on adress?是给多个ip地址用的么？
+		* ssh demon / http demon
+	
+	* Configuration Error:Check the HTTP server's authentication settings. -是不是一定要用apache做转发才可以？
+		* 需要设置http反向代理，所以需要apache或者nginx等。 [apache配置](http://www.hovercool.com/en/Gerrit%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA)
+			* why?
+		* 或者不管权限，把配置中的AUTH 改成development_become_any_account
+
+	* gerrit的账户配置：
+		* 在不设置权限管理的情况下还是会有默认账户作为admin， 很有意思的是创建的账户是没有密码的（不能自己设置密码），但是也可以临时生成一个密码长串。
+		* LDAP的配置？
+		
+	* 数据库的访问和修改：
+		
+
+通过服务器端的命令行操作：
+
+* ssh -p 29418 root@10.0.2.15 xxx  
+	* 配置.ssh/config: user必须是administrator
+	* ssh gerrit xxx 
+	
+```	
+Host gerrit	
+User root
+Port 29418	
+Hostname 10.0.2.15		
+IdentityFile ~/.ssh/id_rsa  #这个是要访问的机器的私钥，对应的公钥要放到服务器上	
+```	
+
+---
+
+* 安装gerrit plugin : delete-project /import-project
+
+	* 下gerrit的源代码
+	* 在plugins下下载插件
+	* 编译插件
+		* 安装brew, ant, jdk, maven(proxy)
+		* 用brew安装buck
+		* 用brew安装watchman
+		* buck 编译插件
+
+```		  
+http://stackoverflow.com/questions/21254291/how-to-install-delete-project-plugin-in-gerrit 
+https://gerrit-review.googlesource.com/Documentation/config-plugins.html#installation 
+
+下载gerrit：要下载稳定版本的gerrit对应的git，
+git clone --recursive https://gerrit.googlesource.com/gerrit
+cd gerrit
+git fetch origin stable-2.11:stable-2.11
+git checkout stable-2.11
+git clone --recursive https://gerrit.googlesource.com/plugins/delete-project
+buck build delete-project:delete-project
+
+
+git clone --recursive https://gerrit.googlesource.com/plugins/rename-project
+git clone --recursive https://gerrit.googlesource.com/plugins/importer
+git fetch origin stable-2.11:stable-2.11
+git fetch origin stable-2.12:stable-2.12
+git checkout stable-2.11
+buck build importer:importer
+
+git clone --recursive https://gerrit.googlesource.com/plugins/reparent 
+
+how to rename a project
+http://lifuzu.com/blog/2014/04/09/rename-repository-on-gerrit/
+
+```
+

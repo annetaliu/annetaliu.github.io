@@ -52,8 +52,6 @@ Git hooks [introduction](https://www.atlassian.com/git/tutorials/git-hooks/) , [
 	pre-push
 
 
-
-
 **Questions:**
 
 * the difference between git clone & git pull  & git fetch
