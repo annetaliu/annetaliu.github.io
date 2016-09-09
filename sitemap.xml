@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>https://annetaliu.github.io/</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://annetaliu.github.io/Pro/CI.html</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://annetaliu.github.io/Pro/CommTech.html</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://annetaliu.github.io/Pro/Linux.html</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://annetaliu.github.io/Pro/Python.html</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://annetaliu.github.io/Pro/web.html</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://annetaliu.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0.html</loc>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>
