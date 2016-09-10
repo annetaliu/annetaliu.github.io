@@ -38,5 +38,5 @@ Computational linguists are interested in providing computational models of vari
 
 * [articles in mitpressjournals](http://www.mitpressjournals.org/action/showMostReadArticles?journalCode=coli)
 * [linkto stanford](https://linguistics.stanford.edu/courses)
- 
+* [North American Computational Linguistics Olympiad](http://nacloweb.org/) 
 
