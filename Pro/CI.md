@@ -17,9 +17,11 @@ on building....<br>
 * Make: qmake
 * Make: [automake](/CI/automake)
 * Make: Maven for Java
+* Code Standard : code check index(/codestyle/index)
 * Code Analysis Tool: [Clang](/CI/codecheck/clang)
 * Code Analysis Tool: [Valgrind](/CI/valgrind)
-* Code Analysis Tool: [G-cover & sonar](/CI/gcov)
+* Code Analysis Tool: [G-cover](/CI/gcov)
+* Code Analysis Tool: [sonarQube](/CI/sonar)
 * Optimize Tech: [Distcc](/CI/distcc)
 * Optimize Tech: LXC
 * Optimize Tech: Docker

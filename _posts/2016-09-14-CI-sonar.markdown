@@ -1,0 +1,21 @@
+---
+layout: post
+title:  SonarQube 
+date:   2016-09-14
+categories: CI
+permalink: /CI/sonar
+---
+
+* SonarQube可以怎么用
+
+* sonarQube的安装
+
+* 项目在sonar中的导入以及管理方式
+
+* API的应用
+
+* 插件使用
+
+* sonarQube的数据结构
+
+

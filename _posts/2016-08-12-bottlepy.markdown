@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Bottlepy
-date:   2016-08-12 01:11:26 -0000
+date:   2016-08-12 01:11:26 
 categories: python
 permalink: /python/bottlepy
 ---
 
+**Desccription**
 一个轻量级的web框架： [bottlepy](http://www.bottlepy.org/docs/dev/index.html)， 只有一个文件。
 
 * 只有一个py文件
@@ -15,4 +16,16 @@ permalink: /python/bottlepy
 * 数据库：找中间件： beaker ...
 	* moudule层
 
+**作为一个web框架需要考虑的有什么**
 
+* server:端口占用情况，代理、转发的兼容方式
+* routing: request response
+* template：
+* Utilities: access to form data, file uploads, cookies, headers and other HTTP-related metadata. 
+	* 如何获取http response的
+	* 数据的管理：
+	* 
+	
+* others:	
+	* plugins
+	* 	

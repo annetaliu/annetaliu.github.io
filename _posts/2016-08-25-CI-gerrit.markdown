@@ -60,6 +60,13 @@ IdentityFile ~/.ssh/id_rsa  #这个是要访问的机器的私钥，对应的公
 
 ---
 
+* 修改某个项目某热分支的名称：
+	* cd /gerrit-path/data/git/repo.git
+	* git symbolic-ref HEAD refs/heads/newBranch
+	?服务器端的命令和本地的命令集合的差别？
+
+
+
 * 安装gerrit plugin : delete-project /import-project
 
 	* 下gerrit的源代码

@@ -13,6 +13,7 @@ permalink: /CI/gcov
 		* --coverage
 		* -lgcov
 		* -fprofile-arcs -ftest-coverage
+		* 编译选项中最好加入 -g3 -O0，前者是为了增加调试信息，后者是为了禁用优化，免得覆盖率测试不准确。
 	* 中间过程文件： 
 		* 编译之后会看到gcno文件
 		* UT跑完之后会看到gcda文件		

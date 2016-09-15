@@ -9,7 +9,8 @@ title:  Web
 * Ruby on Rails
 * Python: django
 * Python: [bottlepy](/python/bottlepy)
-
+* simpleHTTPServer
+* nodejs
 
 **Tools:**
 
