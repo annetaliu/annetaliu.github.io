@@ -20,8 +20,10 @@ on building....<br>
 * Code Standard : code check index(/codestyle/index)
 * Code Analysis Tool: [Clang](/CI/codecheck/clang)
 * Code Analysis Tool: [Valgrind](/CI/valgrind)
+* Code Analysis Tool: cpplint
 * Code Analysis Tool: [G-cover](/CI/gcov)
 * Code Analysis Tool: [sonarQube](/CI/sonar)
+* Code Analysis Tool: [Cobertura](/CI/cobertura)
 * Optimize Tech: [Distcc](/CI/distcc)
 * Optimize Tech: LXC
 * Optimize Tech: Docker

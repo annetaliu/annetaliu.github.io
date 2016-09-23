@@ -9,6 +9,9 @@ permalink: /python/install
 python 安装和几年前比较已经变得越来越简单了，但是因为不同版本间的差异带来的一些安装问题很棘手，下面记录下我遇到过的一些情况（针对linux操作系统）：
 经常我们一台机器上装了多个版本的python:
 
+* 安装默认之外的python:
+	* linxu: 下python源代码[updatepython](https://ruter.github.io/2015/12/03/Update-python/)
+
 * 可以用的安装库的方法：
 	* 下源码编译安装： 通常是setup.py install/build
 		* 安装的目标路径怎么选择？
