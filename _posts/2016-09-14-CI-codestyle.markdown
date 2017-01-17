@@ -26,6 +26,12 @@ permalink: /codestyle/index
 
 **针对java**
 
-* Apache Maven Checkstyle Plugin
-* findbugs
+* Apache Maven Checkstyle Plugin 
+* maven PMD: also support CPD	
+* maven findbugs
+
+	* 官网的说明都很好用
+	* 检查的内容
+	* 默认是sun的java标准，也可以找到google标准的代码配置xml；也可以自己修改，定制标准
+	* 过滤一些文件、目录的方式： 通过comment过滤很方便
 

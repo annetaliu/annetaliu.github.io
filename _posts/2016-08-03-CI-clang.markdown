@@ -32,6 +32,7 @@ Please always refer to offical [UsersManual](http://clang.llvm.org/docs/UsersMan
 	* available cmd 不取代编译器，编译命令作为参数: 不知道为什么，好像某些clang版本不支持 	
 		* scan-build
 		* scan-view
+
 * 外嵌的命令： 
 	* [scan-build](http://clang-analyzer.llvm.org/scan-build.html) :scan-build +编译的命令（make）
 	* scan-view : 查看scan-build生成的结果
