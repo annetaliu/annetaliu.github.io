@@ -1,0 +1,27 @@
+---
+layout: post
+title: VIM
+date:   2017-05-08 01:11:26 -0000
+categories: linux
+permalink: /linux/vim
+---
+
+vimrc:
+
+- basic settings ref: [vimtips](http://www.rayninfo.co.uk/vimtips.html)
+- plugins
+
+
+
+```
+
+set ts=4
+set sw=4
+set nu
+set expandtab
+set go+=a
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+
+```
+

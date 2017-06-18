@@ -14,3 +14,6 @@ on building....
 * About image pkg
 * Virtualization: Xen
 * Virtualization: LXC
+
+* Tools: [vim](/linux/vim)
+
