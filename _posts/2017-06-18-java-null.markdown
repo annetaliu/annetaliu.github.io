@@ -6,13 +6,32 @@ categories: java
 permalink: /java/excessive_null
 ---
 
+在我们的一个group code review的会议中有人提出了代码中过多地对对象做null判断的问题，这样的行为是否合理呢？是否必要呢？是否有更好的方法呢？
+
+看个例子先：
+```
+
+public class FormatName(String fullName) {
+    fullName;
+    public String getFirstName(){
+    };
+    
+    public class GetLastName()
+    
+    
+}
+
+
+```
+
 * java中的null是什么？<br>
   java中的null的设计初衷是为了表示一些缺失的东西,是任何引用类型的默认值，不严格的说是所有object类型的默认值。
   
 
-* null的性格特点：  
+* 使用null时要注意的小提示：  
     - 大小写敏感
     - null既不是对象也不是一种类型，它仅是一种特殊的值，你可以将其赋予任何引用类型
+    - null还可以用来释放内存，让一个非null的引用类型变量指向null
   
 * null的影响
 在java代码中经常看到的关于一个对象是否为空的判断，一般是为了避免空指针异常(java.lang.NullPointerException,后面简称NPE)。
@@ -22,13 +41,13 @@ permalink: /java/excessive_null
 - 
 
 * null的其他用法：
-    - 释放内存，让一个非null的引用类型变量指向null
+    - 
     -
 
 * 如何减少代码中的null判断？    
     
 参考： 
 - [ [Things about Null in Java](http://javarevisited.blogspot.com/2014/12/9-things-about-null-in-java.html) ]
-- [ [Null object pattern](https://en.wikipedia.org/wiki/Null_Object_pattern#Java) ]
+- [ [Null object pattern](https://en.wikipedia.org/wiki/Null_Object_pattern#Java ) ]
 - [ [should-one-check-for-null-if-he-does-not-expect-null](https://softwareengineering.stackexchange.com/questions/147480/should-one-check-for-null-if-he-does-not-expect-null)]
 - [ [top-10-most-common-java-development-mistakes](https://www.toptal.com/java/top-10-most-common-java-development-mistakes) ] 
