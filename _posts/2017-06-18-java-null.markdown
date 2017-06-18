@@ -1,20 +1,34 @@
 ---
 layout: post
-title:  Excessive NULL 
+title:  Excessive null 
 date:   2017-06-18
 categories: java
 permalink: /java/excessive_null
 ---
 
-* java中的null是什么？
-  java中的null的设计初衷是为了表示一些缺失的东西,是任何引用类型的默认值，不严格的说是所有object类型的默认值。[ref](http://www.importnew.com/14229.html)
+* java中的null是什么？<br>
+  java中的null的设计初衷是为了表示一些缺失的东西,是任何引用类型的默认值，不严格的说是所有object类型的默认值。
+  
 
 * null的性格特点：  
     - 大小写敏感
     - null既不是对象也不是一种类型，它仅是一种特殊的值，你可以将其赋予任何引用类型
   
-* NULL的影响
-在java代码中经常看到的关于一个对象是否为空的判断，一般是为了避免空指针异常。
-使用基本的JAVA数据类型，变量的值要么已经是默认值，如果没有对其正常赋值，程序便不能通过编译，因此使用基本的JAVA数据类型(double,float,boolean,char,int,long)一般不会引起空指针异常。由此可见，空指针异常主要跟与对象的操作相关。[ref](http://www.cnblogs.com/programwjy/archive/2010/09/02/1815971.html)
+* null的影响
+在java代码中经常看到的关于一个对象是否为空的判断，一般是为了避免空指针异常(java.lang.NullPointerException,后面简称NPE)。
+使用基本的JAVA数据类型，变量的值要么已经是默认值，如果没有对其正常赋值，程序便不能通过编译，因此使用基本的JAVA数据类型(double,float,boolean,char,int,long)一般不会引起空指针异常。由此可见，空指针异常主要跟与对象的操作相关。
 
+- 静态的方法、变量的引用不会引起NPE
+- 
 
+* null的其他用法：
+    - 释放内存，让一个非null的引用类型变量指向null
+    -
+
+* 如何减少代码中的null判断？    
+    
+参考： 
+- [ [Things about Null in Java](http://javarevisited.blogspot.com/2014/12/9-things-about-null-in-java.html) ]
+- [ [Null object pattern](https://en.wikipedia.org/wiki/Null_Object_pattern#Java) ]
+- [ [should-one-check-for-null-if-he-does-not-expect-null](https://softwareengineering.stackexchange.com/questions/147480/should-one-check-for-null-if-he-does-not-expect-null)]
+- [ [top-10-most-common-java-development-mistakes](https://www.toptal.com/java/top-10-most-common-java-development-mistakes) ] 
