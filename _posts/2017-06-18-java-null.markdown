@@ -68,7 +68,7 @@ public class Demo {
 
     ```
 
-    - 优化设计方式，这样就可以减少子对象在调用时的null判断了。
+    - 优化设计方式，这样就可以减少对象在调用时的null判断了。
     比较下面两种方式：
     ```
     Parser parser = ParserFactory.getParser();
@@ -81,8 +81,6 @@ public class Demo {
     } else {
       action.doSomething();
     }
-    
-    ```
     
     ```
     ParserFactory.getParser().findAction(someInput).doSomething();
