@@ -8,44 +8,86 @@ permalink: /java/excessive_null
 
 在我们的一个group code review的会议中有人提出了代码中过多地对对象做null判断的问题，这样的行为是否合理呢？是否必要呢？是否有更好的方法呢？
 
-看个例子先：
-```
+有时候，为了减少应用程序直接异常退出的情况，在代码中保守地对每个应用的对象先做null的判断，并对未做初始化的对象做出警告。比如我们希望客户在使用的时候因为参数输入错误而得到一个提示的信息打印，而不是让程序直接报出空指针异常而crash.
+看个例子：
 
-public class FormatName(String fullName) {
-    fullName;
-    public String getFirstName(){
-    };
+```
+public class Demo {
+    public static void main(String[] args){
     
-    public class GetLastName()
-    
-    
+    class FormatName{
+        String fullName;
+        void GetFristName(String fullName) {
+            if (fullName == null){ 
+                System.out.println("Error in fullName");
+            } else {
+                String[] formatName=fullName.split("\\s+");
+                System.out.println(format[0]);
+                }   
+        }
+        
+        void GetFristName(String fullName) {
+            if (fullName == null){ 
+                System.out.println("Error in fullName");
+            } else {
+                String[] formatName=fullName.split("\\s+");
+                System.out.println(format[0]);
+                }   
+        }
+                
+        
+        
+        }  
+    }
+
 }
 
 
 ```
 
+
 * java中的null是什么？<br>
   java中的null的设计初衷是为了表示一些缺失的东西,是任何引用类型的默认值，不严格的说是所有object类型的默认值。
   
-
-* 使用null时要注意的小提示：  
-    - 大小写敏感
-    - null既不是对象也不是一种类型，它仅是一种特殊的值，你可以将其赋予任何引用类型
-    - null还可以用来释放内存，让一个非null的引用类型变量指向null
-  
-* null的影响
+* null的影响<br>
 在java代码中经常看到的关于一个对象是否为空的判断，一般是为了避免空指针异常(java.lang.NullPointerException,后面简称NPE)。
 使用基本的JAVA数据类型，变量的值要么已经是默认值，如果没有对其正常赋值，程序便不能通过编译，因此使用基本的JAVA数据类型(double,float,boolean,char,int,long)一般不会引起空指针异常。由此可见，空指针异常主要跟与对象的操作相关。
 
-- 静态的方法、变量的引用不会引起NPE
-- 
+* 使用null时要注意的小提示：  
+    - 大小写敏感
+    - 静态的方法、变量的引用不会引起NPE
+    - null既不是对象也不是一种类型，它仅是一种特殊的值，你可以将其赋予任何引用类型
+    - null还可以用来释放内存，让一个非null的引用类型变量指向null
 
-* null的其他用法：
-    - 
-    -
+* 如果真的在每个可能的情况下都做null判断，会给代码带来不少冗余量，那么如何尽量减少代码中的null判断呢？<br>    
+    - 可以用一些表达式来替代null：
+    ```
+    public String getPostcode(Person person) {
+        return person?.getAddress()?.getPostcode();
+        }
 
-* 如何减少代码中的null判断？    
+    ```
+
+    - 优化设计方式，这样就可以减少子对象在调用时的null判断了。
+    比较下面两种方式：
+    ```
+    Parser parser = ParserFactory.getParser();
+    if (parser == null) {
+        // do sth
+    }
+    Action action = parser.findAction(someInput);
+    if (action == null) {
+      // do nothing
+    } else {
+      action.doSomething();
+    }
     
+    ```
+    
+    ```
+    ParserFactory.getParser().findAction(someInput).doSomething();
+    ```
+        
 参考： 
 - [ [Things about Null in Java](http://javarevisited.blogspot.com/2014/12/9-things-about-null-in-java.html) ]
 - [ [Null object pattern](https://en.wikipedia.org/wiki/Null_Object_pattern#Java ) ]
