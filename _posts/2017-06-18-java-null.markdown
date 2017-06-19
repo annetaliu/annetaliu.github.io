@@ -10,6 +10,7 @@ permalink: /java/excessive_null
 
 有时候，为了减少应用程序直接异常退出的情况，在代码中保守地对每个应用的对象先做null的判断，并对未做初始化的对象做出警告。比如我们希望客户在使用的时候因为参数输入错误而得到一个提示的信息打印，而不是让程序直接报出空指针异常而crash.
 看个例子：
+
     ```
     void GetFristName(String fullName) {
         if (fullName == null){ 
@@ -38,6 +39,7 @@ permalink: /java/excessive_null
 
 * 如果真的在每个可能的情况下都做null判断，会给代码带来不少冗余量，那么如何尽量减少代码中的null判断呢？<br>    
     - 可以用一些表达式来替代null：
+    
     ```
     public String getPostcode(Person person) {
         return person?.getAddress()?.getPostcode();
@@ -45,8 +47,8 @@ permalink: /java/excessive_null
 
     ```
 
-    - 优化设计方式，这样就可以减少对象在调用时的null判断了。
-    比较下面两种方式：
+    - 优化设计方式，这样就可以减少对象在调用时的null判断了。比较下面两种方式：
+    
     ```
     Parser parser = ParserFactory.getParser();
     if (parser == null) {
@@ -58,6 +60,8 @@ permalink: /java/excessive_null
     } else {
       action.doSomething();
     }
+    
+    ```
     
     ```
     ParserFactory.getParser().findAction(someInput).doSomething();
