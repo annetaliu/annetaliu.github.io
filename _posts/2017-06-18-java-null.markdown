@@ -10,40 +10,17 @@ permalink: /java/excessive_null
 
 有时候，为了减少应用程序直接异常退出的情况，在代码中保守地对每个应用的对象先做null的判断，并对未做初始化的对象做出警告。比如我们希望客户在使用的时候因为参数输入错误而得到一个提示的信息打印，而不是让程序直接报出空指针异常而crash.
 看个例子：
+    ```
+    void GetFristName(String fullName) {
+        if (fullName == null){ 
+            System.out.println("Error in fullName");
+        } else {
+            String[] formatName=fullName.split("\\s+");
+            System.out.println(format[0]);
+            }   
+    }       
 
-```
-public class Demo {
-    public static void main(String[] args){
-    
-    class FormatName{
-        String fullName;
-        void GetFristName(String fullName) {
-            if (fullName == null){ 
-                System.out.println("Error in fullName");
-            } else {
-                String[] formatName=fullName.split("\\s+");
-                System.out.println(format[0]);
-                }   
-        }
-        
-        void GetFristName(String fullName) {
-            if (fullName == null){ 
-                System.out.println("Error in fullName");
-            } else {
-                String[] formatName=fullName.split("\\s+");
-                System.out.println(format[0]);
-                }   
-        }
-                
-        
-        
-        }  
-    }
-
-}
-
-
-```
+    ```
 
 
 * java中的null是什么？<br>
