@@ -12,14 +12,35 @@ permalink: /java/excessive_null
 看个例子：
 
     ```
-    void GetFristName(String fullName) {
-        if (fullName == null){ 
-            System.out.println("Error in fullName");
-        } else {
-            String[] formatName=fullName.split("\\s+");
-            System.out.println(format[0]);
-            }   
-    }       
+    
+    public class HelloWorld {
+        public static void main(String[] args){
+            class AllName{
+                String fullName;
+                void printFirstName(){
+                    if (fullName == null){
+                        System.out.println("please input a full name.");
+                        return ;
+                    }
+                    String[] formatName=fullName.split("\\s+");
+                    System.out.println("First Name:" + formatName[0]);
+                }
+
+                void printLastName(){
+                    if (fullName == null){
+                        System.out.println("please input a full name.");
+                        return;
+                    }
+                    String[] formatName=fullName.split("\\s+");
+                    System.out.println("Last Name:" + formatName[1]);
+                }
+            }
+            AllName name1 = new AllName();
+            name1.fullName="Anne Liu";
+            name1.printFirstName();
+            name1.printLastName();
+           }
+    }
 
     ```
 
@@ -47,7 +68,7 @@ permalink: /java/excessive_null
 
     ```
 
-    - 优化设计方式，这样就可以减少对象在调用时的null判断了。比较下面两种方式：
+    - 优化设计方式，采用一些在编译时就会报出NPE的方法，这样就可以减少对象在调用时的null判断了。比较下面两种方式：
     
     ```
     Parser parser = ParserFactory.getParser();
@@ -66,7 +87,8 @@ permalink: /java/excessive_null
     ```
     ParserFactory.getParser().findAction(someInput).doSomething();
     ```
-        
+    
+    
 参考： 
 - [ [Things about Null in Java](http://javarevisited.blogspot.com/2014/12/9-things-about-null-in-java.html) ]
 - [ [Null object pattern](https://en.wikipedia.org/wiki/Null_Object_pattern#Java ) ]
