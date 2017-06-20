@@ -59,6 +59,8 @@ permalink: /java/excessive_null
     - null还可以用来释放内存，让一个非null的引用类型变量指向null
 
 * 如果真的在每个可能的情况下都做null判断，会给代码带来不少冗余量，那么如何尽量减少代码中的null判断呢？<br>    
+    - 静态检查来约束null对象的存在。
+    - 用[optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)替代。
     - 可以用一些表达式来替代null：
     
     ```
