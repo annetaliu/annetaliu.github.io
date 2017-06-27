@@ -7,17 +7,14 @@ layout: default
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }} </time>•浏览量: <span data-hk-page="current"> - </span>次{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
     
-    <script id="dsq-count-scr" src="//anneliu.disqus.com/count.js" async></script>
+   
     
   </header>
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
 	      
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="{{ page.permalink }}" data-title="｛｛ page.title ｝｝" data-url="{{ page.url }}"></div>
-	<!-- 多说评论框 end -->
-
+  <script id="dsq-count-scr" src="//anneliu.disqus.com/count.js" async></script>
   </div>
 
 </article>
